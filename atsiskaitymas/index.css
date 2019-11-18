@@ -88,17 +88,13 @@ i {
 	height: 40px;
 	color: #000000;
 }
-
-}
 .button-yellow{
 	background-color: #ebc985;
 }
 .button-yellow:hover{
 	background-color: #ffffff;
 }
-.main-row-yellow img {
-	height: 300px;
-}
+
 .main-row-yellow h6 {
 	margin-top: 30px;
 }
