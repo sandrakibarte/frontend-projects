@@ -31,6 +31,9 @@
 .main-row-purple .btn-lg:hover {
 	background-color: #c86a40;
 }
+.button-purple:hover{
+	background-color: #643a79;
+}
 .main-row-green {
 	background-color: #17c2a4;
 	color: #ffffff;
@@ -85,8 +88,7 @@ i {
 	height: 40px;
 	color: #000000;
 }
-.button-purple:hover{
-	background-color: #643a79;
+
 }
 .button-yellow{
 	background-color: #ebc985;
