@@ -15,7 +15,9 @@ function renderHTML(data) {
     let htmlString = "";
     for(let i=0;i<data.length;i++){
         htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat" + '</p>';
-
+        
+        //for(ii = 0; ii<data[i].foods.likes.length;ii++){
+        //htmlString += data[i].foods.likes[ii];
     }
     animalContainer.insertAdjacentHTML('beforeend', htmlString)
 }
