@@ -35,16 +35,19 @@ function renderHtml(data) {
 	tableRow.innerHTML = '';
 	
 	appendColumn(tableRow, data.Title);
-	appendColumn(tableRow, data.Plot);
+	appendColumn(tableRow, data.Plot, 'text-truncate');
 	appendColumn(tableRow, data.imdbRating + ' (' + data.imdbVotes + ' votes)');
 	appendColumn(tableRow, data.Runtime);
 	appendColumn(tableRow, data.Director);
 }
 
-function appendColumn(rowElement, text) {
-	let titleTd = document.createElement('td');
-	titleTd.innerHTML = text;
-	rowElement.appendChild(titleTd);
+function appendColumn(rowElement, text, elementClass) {
+	let tdElement = document.createElement('td');
+	tdElement.innerHTML = text;
+	if (elementClass) {
+		tdElement.classList.add(elementClass);
+	}
+	rowElement.appendChild(tdElement);
 }
 
 function showError() {
