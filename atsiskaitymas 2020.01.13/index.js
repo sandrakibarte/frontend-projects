@@ -32,6 +32,7 @@ function renderHtml(data) {
 	toggleResultsTable(true);
 	
 	let tableRow = document.querySelector('#resultsTable .movie');
+	tableRow.innerHTML = '';
 	
 	appendColumn(tableRow, data.Title);
 	appendColumn(tableRow, data.Plot);
