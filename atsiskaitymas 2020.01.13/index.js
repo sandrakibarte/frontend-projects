@@ -1,4 +1,5 @@
 let btn = document.querySelector('.btn');
+let searchInput = document.querySelector('.form-control');
 btn.addEventListener("click", onButtonClicked);
 
 function onButtonClicked() {
@@ -6,7 +7,7 @@ function onButtonClicked() {
 	let xmlHttp = new XMLHttpRequest();
 	xmlHttp.onreadystatechange = handleResponse;
 	
-    xmlHttp.open("GET", 'https://www.omdbapi.com/?apikey=e4db3ced&t=titanic');
+    xmlHttp.open("GET", 'https://www.omdbapi.com/?apikey=e4db3ced&t=' +  searchInput.value);
     xmlHttp.send();
     handleResponse(xmlHttp);
 }
