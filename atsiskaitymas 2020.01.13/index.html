@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h2>Filmų paieška</h2>
+		<h2 class="text-center">Filmų paieška</h2>
 		<div class="row justify-content-center text-center mt-5">
 			<div class="col-4">
 				<div class="input-group mb-3">
@@ -24,20 +24,22 @@
 			
 		</div>
 
-		<table id="resultsTable">
-			<tr class="tableHeader">
-				<th>Pavadinimas</th>
-				<th>Informacija</th>
-				<th>Reitingas</th>
-				<th>Trukmė</th>
-				<th>Režisierius</th>
-			</tr>
-			<tr class="movie">
-				
-			</tr>
-		</table>
-		<div id="errorHolder">
-			Nerastas nei vienas filmas. Prašome patikslinti pavadinimą.
+		<div class="row justify-content-center mt-5">
+			<table id="resultsTable" class="col-8">
+				<tr class="tableHeader">
+					<th>Pavadinimas</th>
+					<th>Informacija</th>
+					<th>Reitingas</th>
+					<th>Trukmė</th>
+					<th>Režisierius</th>
+				</tr>
+				<tr class="movie">
+					
+				</tr>
+			</table>
+			<div id="errorHolder" class="col-4">
+				Nerastas nei vienas filmas. Prašome patikslinti pavadinimą.
+			</div>
 		</div>
 	</div>
 
