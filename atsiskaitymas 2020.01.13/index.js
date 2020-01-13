@@ -1,6 +1,10 @@
 let btn = document.querySelector('.btn');
 let searchInput = document.querySelector('.form-control');
+let errorHolder = document.querySelector('#errorHolder');
+let resultsTable = document.querySelector('#resultsTable');
 btn.addEventListener("click", onButtonClicked);
+toggleError(false);
+toggleResultsTable(false);
 
 function onButtonClicked() {
 
@@ -15,7 +19,7 @@ function onButtonClicked() {
 function handleResponse(response) {
 	if (this.readyState == 4 && this.status == 200) {
         var movie = JSON.parse(this.responseText);
-		if (movie == 0) {
+		if (!movie || movie.Response === 'False') {
 			showError();
 		} else {
 			renderHtml(movie);
@@ -24,9 +28,41 @@ function handleResponse(response) {
 }
 
 function renderHtml(data) {
-	alert(data.Title + ' ' + data.Year);
+	toggleError(false);
+	toggleResultsTable(true);
+	
+	let tableRow = document.querySelector('#resultsTable .movie');
+	
+	appendColumn(tableRow, data.Title);
+	appendColumn(tableRow, data.Plot);
+	appendColumn(tableRow, data.imdbRating + ' (' + data.imdbVotes + ' votes)');
+	appendColumn(tableRow, data.Runtime);
+	appendColumn(tableRow, data.Director);
+}
+
+function appendColumn(rowElement, text) {
+	let titleTd = document.createElement('td');
+	titleTd.innerHTML = text;
+	rowElement.appendChild(titleTd);
 }
 
 function showError() {
-	alert('Error');
+	toggleError(true);
+	toggleResultsTable(false);
+}
+
+function toggleResultsTable(show) {
+	if (show) {
+		resultsTable.style.display = "block";
+	} else {
+		resultsTable.style.display = "none";
+	}
+}
+
+function toggleError(show) {
+	if (show) {
+		errorHolder.style.display = "block";
+	} else {
+		errorHolder.style.display = "none";
+	}
 }
