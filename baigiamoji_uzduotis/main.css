@@ -1,0 +1,46 @@
+.container-fluid{
+	background-color: rgba(50, 115, 220, 0.3);
+	height: 900px;
+}
+h2{
+	text-align: center;
+	color: navy;
+	padding-top: 300
+}
+.form-control{
+	margin-right: 5px;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid DodgerBlue;
+}
+
+thead th:nth-child(1) {
+  width: 20%;
+}
+
+thead th:nth-child(2) {
+  width: 40%;
+}
+
+thead th:nth-child(3) {
+  width: 10%;
+}
+
+thead th:nth-child(4) {
+  width: 10%;
+}
+
+thead th:nth-child(5) {
+  width: 20%;
+}
+
+th, td {
+  padding: 20px;
+}
