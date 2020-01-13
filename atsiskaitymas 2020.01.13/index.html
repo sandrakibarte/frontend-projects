@@ -13,33 +13,34 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h2 class="text-center">Filmų paieška</h2>
+		<h2>Filmų paieška</h2>
 		<div class="row justify-content-center text-center mt-5">
 			<div class="col-4">
 				<div class="input-group mb-3">
-					<input type="text" class="form-control" placeholder="Filmo pavadinimas" aria-label="Recipient's username" aria-describedby="button-addon2">
+					<input type="text" class="form-control" placeholder="Filmo pavadinimas">
 					<button type="button" class="btn btn-primary">Paieška</button>
 				</div>
 			</div>
 			
 		</div>
-
-		<div class="row justify-content-center mt-5">
-			<table id="resultsTable" class="col-8">
-				<tr class="tableHeader">
-					<th>Pavadinimas</th>
-					<th>Informacija</th>
-					<th>Reitingas</th>
-					<th>Trukmė</th>
-					<th>Režisierius</th>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">Pavadinimas</th>
+					<th scope="col">Informacija</th>
+					<th scope="col">Reitingas</th>
+					<th scope="col">Trukmė</th>
+					<th scope="col">Režisierius</th>
 				</tr>
+			</thead>
+			<tbody>
 				<tr class="movie">
-					
+
 				</tr>
-			</table>
-			<div id="errorHolder" class="col-4">
-				Nerastas nei vienas filmas. Prašome patikslinti pavadinimą.
-			</div>
+			</tbody>
+		</table> 
+		<div class="errorHolder">
+			Nerastas nei vienas filmas. Prašome patikslinti pavadinimą.
 		</div>
 	</div>
 
